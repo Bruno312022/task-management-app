@@ -21,12 +21,19 @@
 
 
  .kanban-card {
-     border-style: solid;
      border-width: 1px;
      border-radius: 5px;
      max-width: 100%;
      padding: 10px;
-     margin-bottom: 10px;
+     margin-bottom: 15px;
+     cursor: pointer;
+     transition: backgroun-color 0.5s, color 0.2s;
+ }
+
+ .kanban-card:hover{
+    background-color: black;
+    color: #fff;
+    float: inline-start;
  }
 
  .kanban-status {
