@@ -11,38 +11,52 @@
     <title>Kaban board | task management app</title>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background-color: black;
+            background-color: white;
         }
 
         .kanban-wrapper {
-            background-color: bisque;
             display: grid;
-            grid-template-columns: repeat(3, 300px);
+            grid-template-columns: repeat(3, 250px);
             column-gap: 20px;
             padding: 30px;
             margin: 50px
         }
 
-        .kanban-column {
-            background-color: aquamarine;
+        .kanban-status {
+            margin-bottom: 15px;
         }
 
         .kanban-card {
-            background-color: blue;
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 5px;
+            max-width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
         }
 
         .card-infos {
-            background-color: brown;
-            padding: 20px;
+            border-style: solid;
+            border-width: 1px;
+            padding: 5px;
         }
 
-        .card-icons{
-            background-color: red;
+        .card-icons {
+            border-style: solid;
+            border-width: 1px;
             display: flex;
             align-items: center;
             gap: 20px;
-            justify-content: end;
+            height: 20px;
+            justify-content: start;
+            font-size: 12px;
         }
     </style>
 </head>
@@ -51,7 +65,7 @@
     <main class="kanban-wrapper">
         <!-- card column1 -->
         <div class="kanban-column">
-            <div class="kaban-status">
+            <div class="kanban-status">
                 TODO
             </div>
             <!-- cards -->
@@ -120,7 +134,7 @@
 
         <!-- card column2 -->
         <div class="kanban-column">
-            <div class="kaban-status">
+            <div class="kanban-status">
                 DOING
             </div>
             <!-- cards -->
@@ -189,7 +203,7 @@
 
         <!-- card column3 -->
         <div class="kanban-column">
-            <div class="kaban-status">
+            <div class="kanban-status">
                 DONE
             </div>
             <!-- cards -->
