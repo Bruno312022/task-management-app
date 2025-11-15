@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.form-container {
+    border: 1px solid #000;
+    width: 400px;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-label label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.input-label input,
+.input-label select {
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    border: 1px solid #000;
+    background: #fff;
+    outline: none;
+    font-size: 14px;
+}
+
+.input-label input:focus,
+.input-label select:focus {
+    background: #f5f5f5;
+}
+
+.add-new-subtask,
+.btn-create-task {
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #000;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.add-new-subtask:hover,
+.btn-create-task:hover {
+    background: black;
+    color: #fff;
+}
+
+.add-new-subtask {
+    margin-top: -10px;
+}
