@@ -16,13 +16,15 @@
      grid-template-columns: repeat(3, 250px);
      column-gap: 20px;
      padding: 50px;
-     margin: 50px
+     margin: 100px;
+     border-style: solid;
+     border-width: 1px;
  }
 
 
  .kanban-card {
      border-width: 1px;
-     border-radius: 5px;
+     border-style: solid;
      max-width: 100%;
      padding: 10px;
      margin-bottom: 15px;
@@ -33,7 +35,6 @@
  .kanban-card:hover{
     background-color: black;
     color: #fff;
-    float: inline-start;
  }
 
  .kanban-status {
