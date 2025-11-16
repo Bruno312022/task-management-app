@@ -8,7 +8,8 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 40px 0;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .form-container {
