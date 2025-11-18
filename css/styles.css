@@ -121,12 +121,11 @@
     display: grid;
     grid-template-columns: repeat(3, 250px);
     column-gap: 20px;
-    padding: 20px 250px 20px 0px;
+    padding: 20px 0px 20px 0px;
     margin: 1px 0px 20px 0px;
     border-style: solid;
     border-width: 1px;
     justify-content: center;
-    align-items: center;
 }
 
 .kanban-card {
