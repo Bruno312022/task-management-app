@@ -2,6 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+:root {
+    --bg-dark: #171717;     /* fundo geral */
+    --bg-sidebar: #1f1f2e;  /* fundo parecido com a imagem */
+    --bg-card: #262837;     /* cards escuros */
+    --bg-card-hover: #313349;
+    --primary: #DA0037;     /* destaque */
+    --text: #EDEDED;
+    --text-muted: #bbbbbb;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text);
 }
 
 .layout {
@@ -10,162 +26,146 @@
 }
 
 .sidebar {
-    border-style: solid;
-    border-width: 1px;
-    padding: 1px;
-    margin: 0px 1px 0px 0px;
-    width: 250px;
+    width: 280px;
+    background: var(--bg-sidebar);
+    padding: 30px 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
+    border-right: 1px solid #222;
 }
 
-.sidebar .user {
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px;
-    border-bottom: 1px solid #000;
+    gap: 8px;
 }
 
-.sidebar .user img {
-    width: 45px;
-    height: 45px;
-    border: 1px solid #000;
-    background: #fff;
-}
-
-.user-info {
-    display: flex;
-    flex-direction: column;
+.logo::before {
+    content: "▮▮▮";
+    color: var(--primary);
     font-size: 14px;
-}
-
-.user-info .item-description {
-    font-weight: bold;
-    font-size: 13px;
-}
-
-.user-info span:last-child {
-    font-size: 12px;
+    letter-spacing: 2px;
 }
 
 .side-items {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-direction: column;
+    gap: 8px;
 }
 
 .side-item a {
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 6px;
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 12px 10px;
-    text-decoration: none;
-    color: #000;
-    transition: background 0.15s, color 0.15s;
+    color: var(--text-muted);
+    transition: 0.2s;
+    font-size: 14px;
+    letter-spacing: 0.2px;
 }
 
 .side-item a:hover {
-    background: #000;
-    color: #fff;
+    background: rgba(255,255,255,0.06);
+    color: var(--text);
 }
 
-.side-item i {
-    font-size: 14px;
+.side-item.active a {
+    background: var(--primary);
+    color: white;
 }
 
 .page-wrapper {
     flex: 1;
-    padding: 1px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .kanban-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-style: solid;
-    border-width: 1px;
-    padding: 5px;
 }
 
-.end {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    padding: 20px;
-    gap: 10px;
-}
-
-.logo {
-    font-size: 20px;
-    margin-left: 10px;
+.page-title {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .add-new-task {
-    border-style: solid;
-    border-width: 1px;
-    background-color: white;
-    padding: 16px;
-    transition: background-color 0.2s, color 0.2s;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: 500;
 }
 
 .add-new-task:hover {
-    background-color: black;
-    color: #fff;
+    transform: scale(1.03);
 }
 
 .kanban-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 250px);
-    column-gap: 20px;
-    padding: 20px 0px 20px 0px;
-    margin: 1px 0px 20px 0px;
-    border-style: solid;
-    border-width: 1px;
-    justify-content: center;
-}
-
-.kanban-card {
-    border-width: 1px;
-    border-style: solid;
-    max-width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
-}
-
-.kanban-card:hover {
-    background-color: black;
-    color: #fff;
+    display: flex;
+    gap: 35px;
+    justify-content: flex-start;
 }
 
 .kanban-status {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
     margin-bottom: 15px;
-}
-
-.card-infos {
-    border-style: solid;
-    border-width: 1px;
-    padding: 5px;
-}
-
-.card-icons {
-    border-style: solid;
-    border-width: 1px;
     display: flex;
     align-items: center;
-    gap: 20px;
-    height: 20px;
-    justify-content: start;
-    font-size: 12px;
+    gap: 8px;
+    color: var(--text-muted);
 }
 
+.kanban-status::before {
+    content: "●";
+    font-size: 14px;
+    color: var(--primary);
+}
 
-.kanban-wrapper {
-    margin-left: auto;
-    margin-right: auto;
+.kanban-card {
+    background: var(--bg-card);
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.kanban-card:hover {
+    background: var(--bg-card-hover);
+}
+
+.kanban-card h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: var(--text);
+}
+
+.kanban-card span {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+.card-icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+    opacity: 0.7;
+    font-size: 12px;
 }
