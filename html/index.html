@@ -4,288 +4,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board | Task Management</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Kaban board | task management app</title>
-    
 </head>
 
 <body>
     <div class="layout">
+
+        <!-- SIDEBAR -->
         <nav class="sidebar">
-            <div class="user">
-                <img src="/assets/images/computer-icons-user-profile-avatar-profile.jpg" alt="profile pic">
-                <p class="user-info">
-                    <span class="item-description">
-                        Username
-                    </span>
-                    <span item-description>
-                        lorem ipsum
-                    </span>
-                </p>
-            </div>
+
+            <div class="logo">kanban</div>
 
             <ul class="side-items">
-                <li class="side-item">
+                <li class="side-item active">
                     <a href="#">
-                        <i class="fa-solid fa-border-top-left"></i>
-                        <span class="item-description">Board</span>
+                        <i class="fa-solid fa-table-columns"></i>
+                        Platform Launch
                     </a>
                 </li>
 
                 <li class="side-item">
                     <a href="#">
-                        <i class="fa-solid fa-border-top-left"></i>
-                        <span class="item-description">Board</span>
+                        <i class="fa-regular fa-file-lines"></i>
+                        Marketing Plan
                     </a>
                 </li>
 
                 <li class="side-item">
                     <a href="#">
-                        <i class="fa-solid fa-border-top-left"></i>
-                        <span class="item-description">Board</span>
+                        <i class="fa-solid fa-route"></i>
+                        Roadmap
                     </a>
                 </li>
+
                 <li class="side-item">
                     <a href="#">
-                        <i class="fa-solid fa-border-top-left"></i>
-                        <span class="item-description">Board</span>
+                        <i class="fa-solid fa-plus"></i>
+                        Create New Board
                     </a>
                 </li>
             </ul>
         </nav>
 
+        <!-- PAGE CONTENT -->
         <div class="page-wrapper">
-            <!-- header -->
+
+            <!-- HEADER -->
             <header class="kanban-header">
-                <p class="logo">Kanban-board</p>
-                <nav class="end">
-                    <a href="newcard.html">
-                        <button class="add-new-task">
-                            + Add New task
-                        </button>
-                    </a>
-                    &vellip;
-                </nav>
+                <p class="page-title">Platform Launch</p>
+
+                <button class="add-new-task">+ Add New Task</button>
             </header>
 
-            <!-- main content -->
+            <!-- KANBAN COLUMNS -->
             <main class="kanban-wrapper">
-                <!-- card column1 -->
-                <div class="kanban-column">
-                    <div class="kanban-status">
-                        <i class="fa-regular fa-circle"></i>
-                        TODO
-                    </div>
-                    <!-- cards -->
+
+                <!-- TODO -->
+                <section class="kanban-column">
+
+                    <div class="kanban-status">TO DO</div>
+
                     <div class="kanban-cards">
                         <div class="kanban-card" draggable="true">
-                            <p class="card-title">Resolução de conflitos de merge</p>
+                            <h4>Build UI for onboarding flow</h4>
+                            <span>3 of 5 subtasks</span>
 
-                            <div class="card-infos">
-                                <div class="card-icons">
-                                    <p>
-                                        <i class="fa-regular fa-comment"></i>
-                                    </p>
-
-                                    <p>
-                                        <i class="fa-solid fa-list-check"></i>
-                                    </p>
-
-                                    <p>
-                                        <i class="fa-solid fa-eye"></i>
-                                    </p>
-                                </div>
+                            <div class="card-icons">
+                                <i class="fa-regular fa-comment"></i>
+                                <i class="fa-solid fa-list-check"></i>
+                                <i class="fa-solid fa-eye"></i>
                             </div>
                         </div>
 
                         <div class="kanban-card" draggable="true">
-                            <p class="card-title">Resolução de conflitos de merge</p>
+                            <h4>Build UI for search</h4>
+                            <span>0 of 1 subtask</span>
 
-                            <div class="card-infos">
-                                <div class="card-icons">
-                                    <p>
-                                        <i class="fa-regular fa-comment"></i>
-                                    </p>
-
-                                    <p>
-                                        <i class="fa-solid fa-list-check"></i>
-                                    </p>
-
-                                    <p>
-                                        <i class="fa-solid fa-eye"></i>
-                                    </p>
-                                </div>
+                            <div class="card-icons">
+                                <i class="fa-regular fa-comment"></i>
+                                <i class="fa-solid fa-list-check"></i>
+                                <i class="fa-solid fa-eye"></i>
                             </div>
                         </div>
 
                         <div class="kanban-card" draggable="true">
-                            <p class="card-title">Resolução de conflitos de merge</p>
+                            <h4>Build settings UI</h4>
+                            <span>0 of 2 subtasks</span>
 
-                            <div class="card-infos">
-                                <div class="card-icons">
-                                    <p>
-                                        <i class="fa-regular fa-comment"></i>
-                                    </p>
-
-                                    <p>
-                                        <i class="fa-solid fa-list-check"></i>
-                                    </p>
-
-                                    <p>
-                                        <i class="fa-solid fa-eye"></i>
-                                    </p>
-                                </div>
+                            <div class="card-icons">
+                                <i class="fa-regular fa-comment"></i>
+                                <i class="fa-solid fa-list-check"></i>
+                                <i class="fa-solid fa-eye"></i>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- card column2 -->
-                <div class="kanban-column">
-                    <div class="kanban-status">
-                        <i class="fa-regular fa-circle"></i>
-                        DOING
-                    </div>
-                    <!-- cards -->
+                </section>
+
+                <!-- DOING -->
+                <section class="kanban-column">
+
+                    <div class="kanban-status">DOING</div>
+
                     <div class="kanban-cards">
                         <div class="kanban-card" draggable="true">
-                            <p class="card-title">Resolução de conflitos de merge</p>
+                            <h4>Design onboarding flow</h4>
+                            <span>1 of 3 subtasks</span>
 
-                            <div class="card-infos">
-                                <div class="card-icons">
-                                    <p>
-                                        <i class="fa-regular fa-comment"></i>
-                                    </p>
-
-                                    <p>
-                                        <i class="fa-solid fa-list-check"></i>
-                                    </p>
-
-                                    <p>
-                                        <i class="fa-solid fa-eye"></i>
-                                    </p>
-                                </div>
+                            <div class="card-icons">
+                                <i class="fa-regular fa-comment"></i>
+                                <i class="fa-solid fa-list-check"></i>
+                                <i class="fa-solid fa-eye"></i>
                             </div>
                         </div>
 
                         <div class="kanban-card" draggable="true">
-                            <p class="card-title">Resolução de conflitos de merge</p>
+                            <h4>Add account management endpoints</h4>
+                            <span>2 of 3 subtasks</span>
 
-                            <div class="card-infos">
-                                <div class="card-icons">
-                                    <p>
-                                        <i class="fa-regular fa-comment"></i>
-                                    </p>
-
-                                    <p>
-                                        <i class="fa-solid fa-list-check"></i>
-                                    </p>
-
-                                    <p>
-                                        <i class="fa-solid fa-eye"></i>
-                                    </p>
-                                </div>
+                            <div class="card-icons">
+                                <i class="fa-regular fa-comment"></i>
+                                <i class="fa-solid fa-list-check"></i>
+                                <i class="fa-solid fa-eye"></i>
                             </div>
                         </div>
 
                         <div class="kanban-card" draggable="true">
-                            <p class="card-title">Resolução de conflitos de merge</p>
+                            <h4>Add search endpoints</h4>
+                            <span>1 of 2 subtasks</span>
 
-                            <div class="card-infos">
-                                <div class="card-icons">
-                                    <p>
-                                        <i class="fa-regular fa-comment"></i>
-                                    </p>
-
-                                    <p>
-                                        <i class="fa-solid fa-list-check"></i>
-                                    </p>
-
-                                    <p>
-                                        <i class="fa-solid fa-eye"></i>
-                                    </p>
-                                </div>
+                            <div class="card-icons">
+                                <i class="fa-regular fa-comment"></i>
+                                <i class="fa-solid fa-list-check"></i>
+                                <i class="fa-solid fa-eye"></i>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- card column3 -->
-                <div class="kanban-column">
-                    <div class="kanban-status">
-                        <i class="fa-regular fa-circle"></i>
-                        DONE
-                    </div>
-                    <!-- cards -->
+                </section>
+
+                <!-- DONE -->
+                <section class="kanban-column">
+
+                    <div class="kanban-status">DONE</div>
+
                     <div class="kanban-cards">
                         <div class="kanban-card" draggable="true">
-                            <p class="card-title">Resolução de conflitos de merge</p>
+                            <h4>Conduct 5 wireframe tests</h4>
+                            <span>1 of 1 subtask</span>
 
-                            <div class="card-infos">
-                                <div class="card-icons">
-                                    <p>
-                                        <i class="fa-regular fa-comment"></i>
-                                    </p>
-
-                                    <p>
-                                        <i class="fa-solid fa-list-check"></i>
-                                    </p>
-
-                                    <p>
-                                        <i class="fa-solid fa-eye"></i>
-                                    </p>
-                                </div>
+                            <div class="card-icons">
+                                <i class="fa-regular fa-comment"></i>
+                                <i class="fa-solid fa-list-check"></i>
+                                <i class="fa-solid fa-eye"></i>
                             </div>
                         </div>
 
                         <div class="kanban-card" draggable="true">
-                            <p class="card-title">Resolução de conflitos de merge</p>
+                            <h4>Create paper prototypes</h4>
+                            <span>2 of 2 subtasks</span>
 
-                            <div class="card-infos">
-                                <div class="card-icons">
-                                    <p>
-                                        <i class="fa-regular fa-comment"></i>
-                                    </p>
-
-                                    <p>
-                                        <i class="fa-solid fa-list-check"></i>
-                                    </p>
-
-                                    <p>
-                                        <i class="fa-solid fa-eye"></i>
-                                    </p>
-                                </div>
+                            <div class="card-icons">
+                                <i class="fa-regular fa-comment"></i>
+                                <i class="fa-solid fa-list-check"></i>
+                                <i class="fa-solid fa-eye"></i>
                             </div>
                         </div>
 
                         <div class="kanban-card" draggable="true">
-                            <p class="card-title">Resolução de conflitos de merge</p>
+                            <h4>Market discovery</h4>
+                            <span>1 of 1 subtask</span>
 
-                            <div class="card-infos">
-                                <div class="card-icons">
-                                    <p>
-                                        <i class="fa-regular fa-comment"></i>
-                                    </p>
-
-                                    <p>
-                                        <i class="fa-solid fa-list-check"></i>
-                                    </p>
-
-                                    <p>
-                                        <i class="fa-solid fa-eye"></i>
-                                    </p>
-                                </div>
+                            <div class="card-icons">
+                                <i class="fa-regular fa-comment"></i>
+                                <i class="fa-solid fa-list-check"></i>
+                                <i class="fa-solid fa-eye"></i>
                             </div>
                         </div>
                     </div>
-                </div>
+
+                </section>
+
             </main>
         </div>
     </div>
-
 
     <script src="/js/script.js"></script>
 </body>
